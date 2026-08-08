@@ -42,7 +42,7 @@ export function SaveDate({ t, lang, target }: { t: T; lang: Lang; target: Date }
           </div>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <a
-              href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Mousa%20%26%20Shahd%20Wedding&dates=20260821T153000Z/20260821T200000Z&location=Wedding%20Venue&details=Wedding%20of%20Mousa%20%26%20Shahd"
+              href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Mousa%20%26%20Shahd%20Wedding&dates=20261009T153000Z/20261009T200000Z&location=Wedding%20Venue&details=Wedding%20of%20Mousa%20%26%20Shahd"
               target="_blank"
               rel="noreferrer"
               className={`group relative overflow-hidden border border-gold-deep/60 bg-gold-deep px-6 py-3 text-xs text-cream transition hover:bg-ink ${isAr ? "font-arabic text-sm" : "font-display tracking-[0.3em] uppercase"}`}
