@@ -15,7 +15,7 @@ import { OrnamentDivider } from "./components/OrnamentDivider";
 const WEDDING_DATE = new Date("2026-10-09T16:00:00Z");
 
 const PHOTO_GROUPS = [
-  ["/gallery/gallery-1.jpg", "/gallery/gallery-2.jpg"],
+  ["/gallery/gallery-2.jpg"],
   ["/gallery/gallery-3.jpg", "/gallery/gallery-4.jpg"],
   ["/gallery/gallery-5.jpg", "/gallery/gallery-6.jpg"],
   ["/gallery/gallery-7.jpg", "/gallery/gallery-8.jpg"],
