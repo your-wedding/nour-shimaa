@@ -8,7 +8,7 @@ export function SaveDate({ t, lang, target }: { t: T; lang: Lang; target: Date }
 
   return (
     <>
-      <section className="relative overflow-hidden px-6 py-16 text-center">
+      <section className="relative overflow-hidden px-6 py-20 text-center">
         <div className="mx-auto max-w-2xl">
           <h2 className={`text-4xl text-gold-deep ${isAr ? "font-calligraphy" : "font-script"}`}>
             {t.countdownTitle}
@@ -22,17 +22,28 @@ export function SaveDate({ t, lang, target }: { t: T; lang: Lang; target: Date }
 
       <PhotoStrip photos={["/gallery/gallery-2.jpg"]} />
 
-      <section className="relative px-6 py-16">
+      <section className="relative px-6 py-20">
         <div className="mx-auto max-w-md text-center">
           <h2 className={`text-4xl text-gold-deep ${isAr ? "font-calligraphy" : "font-script"}`}>
             {t.saveDateTitle}
           </h2>
+          <div className="mx-auto mt-4 inline-block">
+            <div className="relative px-8 py-2">
+              <span className="absolute inset-x-0 top-0 h-full skew-x-[-8deg] border-y border-gold-deep/50 bg-gold-deep/10 shadow-[0_4px_12px_-4px_oklch(0.5_0.1_65/0.4)]" />
+              <span className="absolute -left-2 top-1/2 h-4 w-4 -translate-y-1/2 rotate-45 border border-gold-deep/50 bg-gold-deep/10" />
+              <span className="absolute -right-2 top-1/2 h-4 w-4 -translate-y-1/2 rotate-45 border border-gold-deep/50 bg-gold-deep/10" />
+              <span className={`relative z-10 text-[10px] tracking-[0.4em] text-gold-deep ${isAr ? "font-arabic text-sm tracking-normal" : "uppercase"}`}>
+                {t.monthYear}
+              </span>
+            </div>
+          </div>
           <OrnamentDivider className="mx-auto mt-3 h-5 w-40 text-gold-deep" />
           <p className={`mt-6 text-sm leading-relaxed text-ink/75 ${isAr ? "font-arabic text-base" : ""}`}>
             {t.saveDateText}
           </p>
-          <div className="mx-auto mt-8 inline-flex flex-col items-center gap-2 border border-gold-deep/50 bg-cream/60 px-10 py-6 shadow-[0_15px_40px_-20px_oklch(0.35_0.07_60/0.4)]">
-            <div className={`text-[10px] text-gold-deep/80 ${isAr ? "font-arabic text-sm tracking-normal" : "font-display tracking-[0.4em] uppercase"}`}>
+          <div className="relative mx-auto mt-8 inline-flex flex-col items-center gap-2 overflow-hidden border border-gold-deep/50 bg-cream/60 px-10 py-6 shadow-[0_15px_40px_-20px_oklch(0.35_0.07_60/0.4)]">
+            <span className="pointer-events-none absolute inset-0 animate-[shimmer_4s_ease-in-out_infinite] bg-gradient-to-r from-transparent via-gold/15 to-transparent" />
+            <div className={`relative text-[10px] text-gold-deep/80 ${isAr ? "font-arabic text-sm tracking-normal" : "font-display tracking-[0.4em] uppercase"}`}>
               {t.saturday}
             </div>
             <div className="font-script text-7xl leading-none text-gold-gradient">09</div>
