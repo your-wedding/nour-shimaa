@@ -4,22 +4,15 @@ import { Envelope } from "./components/Envelope";
 import { Hero } from "./components/Hero";
 import { Bismillah } from "./components/Bismillah";
 import { SaveDate } from "./components/SaveDate";
+import { Bridesmaids } from "./components/Bridesmaids";
 import { Venue } from "./components/Venue";
 import { MapSection } from "./components/MapSection";
-import { PhotoStrip } from "./components/PhotoStrip";
 import { RSVPSection } from "./components/RSVPSection";
 import { MusicPlayer } from "./components/MusicPlayer";
 import { LanguageToggle } from "./components/LanguageToggle";
 import { OrnamentDivider } from "./components/OrnamentDivider";
 
 const WEDDING_DATE = new Date("2026-10-09T16:00:00Z");
-
-const PHOTO_GROUPS = [
-  ["/gallery/gallery-2.jpg"],
-  ["/gallery/gallery-3.jpg", "/gallery/gallery-4.jpg"],
-  ["/gallery/gallery-5.jpg", "/gallery/gallery-6.jpg"],
-  ["/gallery/gallery-7.jpg", "/gallery/gallery-8.jpg"],
-];
 
 function MainContent() {
   const [lang, setLang] = useState<Lang>("en");
@@ -42,19 +35,13 @@ function MainContent() {
 
       <Bismillah t={t} />
 
-      <PhotoStrip photos={PHOTO_GROUPS[0]} lang={lang} />
-
       <SaveDate t={t} lang={lang} target={WEDDING_DATE} />
 
-      <PhotoStrip photos={PHOTO_GROUPS[1]} lang={lang} />
+      <Bridesmaids t={t} lang={lang} />
 
       <Venue t={t} lang={lang} />
 
-      <PhotoStrip photos={PHOTO_GROUPS[2]} lang={lang} />
-
       <MapSection t={t} lang={lang} />
-
-      <PhotoStrip photos={PHOTO_GROUPS[3]} lang={lang} />
 
       <RSVPSection t={t} lang={lang} />
 
