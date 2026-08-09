@@ -42,6 +42,11 @@ export function Envelope({ onOpen, t }: { onOpen: () => void; t: T }) {
         </svg>
       </div>
 
+      <div className={`env-names ${opened ? "is-open" : ""}`} aria-hidden>
+        <div className="env-names-script">Nour &amp; Shimaa</div>
+        <div className="env-names-date">9 · 10 · 2026</div>
+      </div>
+
       <style>{`
         .env-stage {
           perspective: 2200px;
@@ -151,6 +156,41 @@ export function Envelope({ onOpen, t }: { onOpen: () => void; t: T }) {
         .env-hint-divider {
           width: 120px;
           height: 14px;
+        }
+        .env-names {
+          position: absolute;
+          top: 68%;
+          left: 50%;
+          transform: translateX(-50%);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 6px;
+          color: #9a7b3a;
+          text-align: center;
+          transition: opacity 0.6s ease, transform 0.6s ease;
+          pointer-events: none;
+        }
+        .env-names.is-open {
+          opacity: 0;
+          transform: translateX(-50%) scale(0.92);
+        }
+        .env-names-script {
+          font-family: "Alex Brush", cursive;
+          font-size: 44px;
+          line-height: 1.1;
+          background: linear-gradient(90deg, #9a7b3a, #c8a04a, #9a7b3a);
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          color: #9a7b3a;
+          filter: drop-shadow(0 1px 2px rgba(255, 255, 255, 0.9));
+        }
+        .env-names-date {
+          font-size: 12px;
+          letter-spacing: 0.45em;
+          text-transform: uppercase;
+          color: #9a7b3a;
         }
       `}</style>
     </div>
