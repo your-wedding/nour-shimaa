@@ -127,7 +127,18 @@ export function RSVPSection({ t, lang }: { t: T; lang: string }) {
   return (
     <section className="relative px-6 py-20 bg-[oklch(0.97_0.01_80)] border-t border-b border-gold/20">
       <div className="mx-auto w-full max-w-[520px]">
-        <div className="bg-white/90 p-8 shadow-[0_20px_40px_-15px_oklch(0.35_0.07_60/0.2)] border border-gold-deep/40 text-center relative">
+        <div className="relative bg-white/90 p-8 shadow-[0_20px_40px_-15px_oklch(0.35_0.07_60/0.2)] border border-gold-deep/40 text-center">
+          {["tl", "tr", "bl", "br"].map((corner) => (
+            <span
+              key={corner}
+              className={`pointer-events-none absolute h-6 w-6 border-gold-deep ${
+                corner === "tl" ? "left-2 top-2 border-l-2 border-t-2" :
+                corner === "tr" ? "right-2 top-2 border-r-2 border-t-2" :
+                corner === "bl" ? "left-2 bottom-2 border-b-2 border-l-2" :
+                "right-2 bottom-2 border-b-2 border-r-2"
+              }`}
+            />
+          ))}
 
           <div className={`font-arabic text-xl font-bold text-gold-deep mb-2`}>
             {t.rsvpTitle}
@@ -229,6 +240,14 @@ export function RSVPSection({ t, lang }: { t: T; lang: string }) {
               )}
 
               {error && <p className="text-xs text-red-600 font-arabic">{error}</p>}
+
+              <div className="flex items-center justify-center gap-3 pt-1">
+                <span className="h-px w-16 bg-gradient-to-l from-transparent via-gold to-transparent" />
+                <svg viewBox="0 0 24 24" className="h-4 w-4 fill-gold" aria-hidden>
+                  <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                </svg>
+                <span className="h-px w-16 bg-gradient-to-r from-transparent via-gold to-transparent" />
+              </div>
 
               <div>
                 <label className="block font-arabic text-sm font-medium text-ink/80 mb-1.5">
