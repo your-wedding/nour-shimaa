@@ -54,6 +54,32 @@
   100% { transform: translateX(100%); }
 }
 
+@keyframes eq-bar {
+  0%, 100% { transform: scaleY(0.3); }
+  50% { transform: scaleY(1); }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: #c8a04a;
+  color: #fdf8f0;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #faf5eb;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#c8a04a, #9a7b3a);
+  border-radius: 8px;
+  border: 2px solid #faf5eb;
+}
+
 .curtain-left {
   position: absolute;
   top: 0;
