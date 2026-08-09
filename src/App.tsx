@@ -42,10 +42,6 @@ function MainContent() {
       </div>
 
       <div className="relative z-10">
-        <div className="flex justify-center pt-8">
-          <OrnamentDivider className="h-6 w-48 text-gold-deep/70" />
-        </div>
-
         <Hero t={t} lang={lang} visible={heroVisible} petalsVisible={petalsVisible} />
 
         <Reveal><Bismillah t={t} /></Reveal>
