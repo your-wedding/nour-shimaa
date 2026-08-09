@@ -59,7 +59,6 @@ export function Hero({ t, lang, visible, petalsVisible }: { t: T; lang: string; 
             {t.time}
           </div>
         </div>
-        </div>
       </div>
       {petalsVisible && <FallingPetals count={26} />}
       <div className="absolute bottom-6 left-1/2 z-30 -translate-x-1/2 fade-up">
