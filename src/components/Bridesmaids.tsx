@@ -6,7 +6,7 @@ export function Bridesmaids({ t, lang }: { t: T; lang: Lang }) {
   const isAr = lang === "ar";
 
   return (
-    <section className="relative px-6 py-16">
+    <section className="relative px-6 py-20">
       <div className="text-center">
         <div className={`text-[10px] text-gold-deep/70 ${isAr ? "font-arabic text-sm" : "tracking-[0.5em] uppercase"}`}>
           {t.bridesmaidsKicker}
@@ -20,7 +20,7 @@ export function Bridesmaids({ t, lang }: { t: T; lang: Lang }) {
         <div className="relative overflow-hidden border border-gold-deep/40 bg-cream/60 p-1.5">
           <div className="relative border border-gold/40">
             <img
-              src={asset("/gallery/gallery-4.jpg")}
+              src={asset("/gallery/gallery-4.jpeg")}
               alt={t.bridesmaidsTitle}
               loading="lazy"
               className="block w-full object-cover"
