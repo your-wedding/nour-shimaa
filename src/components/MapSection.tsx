@@ -14,13 +14,13 @@ export function MapSection({ t, lang }: { t: T; lang: string }) {
         <div className="mt-6 overflow-hidden rounded-sm border border-gold/30 shadow-xl shadow-gold-deep/10">
           <iframe
             title="Wedding venue location"
-            src="https://www.google.com/maps?q=31.9606234,35.8801702&output=embed"
+            src="https://www.google.com/maps?q=31.2166456,30.1042846&output=embed"
             className="h-72 w-full"
             loading="lazy"
           />
         </div>
         <a
-          href="https://www.google.com/maps/place/%D9%81%D9%86%D8%AF%D9%82+%D8%B4%D9%8A%D8%B1%D8%A7%D8%AA%D9%88%D9%86+%D8%B9%D9%85%D8%A7%D9%86%E2%80%AD/@31.9601207,35.8778002,15.25z/data=!4m9!3m8!1s0x1504a948e643cb09:0x185af7c4d5a2737b!5m2!4m1!1i2!8m2!3d31.9606234!4d35.8801702!16s%2Fg%2F121_bwht!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDcyNi4wIKXMDSoASAFQAw%3D%3D"
+          href="https://www.google.com/maps/place/%D9%82%D8%A7%D8%B9%D9%87+%D8%AC%D8%A7%D8%B1%D8%AF%D9%8A%D9%86%D9%8A%D8%A7%E2%80%AD/@31.2166456,30.1042846,17z/data=!3m1!4b1!4m6!3m5!1s0x14f5d9e851c12773:0xef7cb5d6a7ab1cf6!8m2!3d31.2166456!4d30.1042846!16s%2Fg%2F11p_82y4pq!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDgwNS4xIKXMDSoASAFQAw%3D%3D"
           target="_blank"
           rel="noreferrer"
           className={`mt-6 inline-block border-b border-gold-deep/40 pb-1 text-xs text-gold-deep hover:text-ink transition ${isAr ? "font-arabic text-sm" : "font-display tracking-[0.3em] uppercase"}`}
