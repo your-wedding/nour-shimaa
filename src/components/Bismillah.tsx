@@ -10,6 +10,17 @@ export function Bismillah({ t }: { t: T }) {
         }}
       >
         <div className="relative border border-gold-deep/60 p-[10px]">
+          {["tl", "tr", "bl", "br"].map((corner) => (
+            <span
+              key={corner}
+              className={`pointer-events-none absolute h-5 w-5 border-gold-deep ${
+                corner === "tl" ? "left-1 top-1 border-l border-t" :
+                corner === "tr" ? "right-1 top-1 border-r border-t" :
+                corner === "bl" ? "left-1 bottom-1 border-b border-l" :
+                "right-1 bottom-1 border-b border-r"
+              }`}
+            />
+          ))}
           <div className="border border-gold/40 px-7 py-12 text-center" dir="rtl">
             <div className="font-calligraphy text-2xl leading-tight text-gold-deep">
               بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ
@@ -44,20 +55,24 @@ export function Bismillah({ t }: { t: T }) {
             <div className="mt-4 flex items-start justify-center gap-4 overflow-visible py-2">
               <div className="flex flex-col items-center">
                 <span className="font-arabic text-xs text-gold-deep/80 mb-1">{t.groomTitle}</span>
-                <span className="font-calligraphy text-[clamp(2.8rem,11vw,4.5rem)] leading-[1.4] text-gold-gradient pb-2">
+                <span className="font-arabic font-bold text-[clamp(2.8rem,11vw,4.5rem)] leading-[1.5] text-gold-gradient pb-2">
                   {t.groomName}
                 </span>
               </div>
-              <span className="font-calligraphy text-2xl text-gold-deep self-center pt-6">و</span>
+              <span className="self-center pt-6 text-2xl text-gold-deep">
+                <svg viewBox="0 0 24 24" className="h-7 w-7 fill-current" aria-hidden>
+                  <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                </svg>
+              </span>
               <div className="flex flex-col items-center">
                 <span className="font-arabic text-xs text-gold-deep/80 mb-1">{t.brideTitle}</span>
-                <span className="font-calligraphy text-[clamp(2.8rem,11vw,4.5rem)] leading-[1.4] text-gold-gradient pb-2">
+                <span className="font-arabic font-bold text-[clamp(2.8rem,11vw,4.5rem)] leading-[1.5] text-gold-gradient pb-2">
                   {t.brideName}
                 </span>
               </div>
             </div>
-            <div className="mt-3 font-display text-[11px] tracking-[0.4em] text-gold-deep/80" dir="ltr">
-              {t.groomName.toUpperCase()} &amp; {t.brideName.toUpperCase()}
+            <div className="mt-4 font-names text-4xl leading-none text-gold-gradient" dir="ltr">
+              {t.groomName} &amp; {t.brideName}
             </div>
           </div>
         </div>
