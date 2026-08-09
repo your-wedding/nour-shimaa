@@ -32,7 +32,7 @@ export function SaveDate({ t, lang, target }: { t: T; lang: Lang; target: Date }
             <div className={`text-[10px] text-gold-deep/80 ${isAr ? "font-arabic text-sm tracking-normal" : "font-display tracking-[0.4em] uppercase"}`}>
               {t.saturday}
             </div>
-            <div className="font-script text-7xl leading-none text-gold-gradient">21</div>
+            <div className="font-script text-7xl leading-none text-gold-gradient">09</div>
             <div className={`text-xs text-ink/70 ${isAr ? "font-arabic text-sm" : "font-display tracking-[0.35em] uppercase"}`}>
               {t.monthYear}
             </div>
