@@ -7,6 +7,7 @@ interface RSVPItem {
   name: string;
   status: "attending" | "not-attending";
   guests: number;
+  message?: string;
   createdAt?: string;
 }
 
@@ -15,6 +16,7 @@ export function RSVPSection({ t, lang }: { t: T; lang: string }) {
   const [name, setName] = useState("");
   const [status, setStatus] = useState<"attending" | "not-attending">("attending");
   const [guests, setGuests] = useState(1);
+  const [message, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [rsvps, setRsvps] = useState<RSVPItem[]>([]);
@@ -78,6 +80,7 @@ export function RSVPSection({ t, lang }: { t: T; lang: string }) {
       name: name.trim(),
       status,
       guests: status === "attending" ? guests : 0,
+      message: message.trim(),
       createdAt: new Date().toLocaleString(),
     };
 
@@ -142,6 +145,7 @@ export function RSVPSection({ t, lang }: { t: T; lang: string }) {
                   setSubmitted(false);
                   setName("");
                   setGuests(1);
+                  setMessage("");
                 }}
                 className="mt-6 text-xs text-gold-deep underline hover:text-gold font-arabic"
               >
@@ -225,6 +229,19 @@ export function RSVPSection({ t, lang }: { t: T; lang: string }) {
               )}
 
               {error && <p className="text-xs text-red-600 font-arabic">{error}</p>}
+
+              <div>
+                <label className="block font-arabic text-sm font-medium text-ink/80 mb-1.5">
+                  {t.rsvpMessage}
+                </label>
+                <textarea
+                  rows={3}
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  placeholder={t.rsvpMessagePlaceholder}
+                  className="w-full rounded-md border border-gold-deep/30 bg-paper px-4 py-2.5 font-arabic text-sm text-ink focus:border-gold-deep focus:outline-none focus:ring-1 focus:ring-gold-deep resize-none"
+                />
+              </div>
 
               <button
                 type="submit"
