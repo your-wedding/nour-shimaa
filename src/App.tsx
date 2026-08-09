@@ -4,19 +4,25 @@ import { Envelope } from "./components/Envelope";
 import { Hero } from "./components/Hero";
 import { Bismillah } from "./components/Bismillah";
 import { SaveDate } from "./components/SaveDate";
-import { Timeline } from "./components/Timeline";
 import { Venue } from "./components/Venue";
 import { MapSection } from "./components/MapSection";
-import { Gallery } from "./components/Gallery";
+import { PhotoStrip } from "./components/PhotoStrip";
 import { RSVPSection } from "./components/RSVPSection";
 import { MusicPlayer } from "./components/MusicPlayer";
 import { LanguageToggle } from "./components/LanguageToggle";
 import { OrnamentDivider } from "./components/OrnamentDivider";
 
-const WEDDING_DATE = new Date("2026-10-09T15:30:00Z");
+const WEDDING_DATE = new Date("2026-10-09T16:00:00Z");
+
+const PHOTO_GROUPS = [
+  ["/gallery/gallery-1.jpg", "/gallery/gallery-2.jpg"],
+  ["/gallery/gallery-3.jpg", "/gallery/gallery-4.jpg"],
+  ["/gallery/gallery-5.jpg", "/gallery/gallery-6.jpg"],
+  ["/gallery/gallery-7.jpg", "/gallery/gallery-8.jpg"],
+];
 
 function MainContent() {
-  const [lang, setLang] = useState<Lang>("ar");
+  const [lang, setLang] = useState<Lang>("en");
   const [heroVisible, setHeroVisible] = useState(false);
   const [petalsVisible, setPetalsVisible] = useState(false);
   const t = translations[lang];
@@ -36,15 +42,19 @@ function MainContent() {
 
       <Bismillah t={t} />
 
+      <PhotoStrip photos={PHOTO_GROUPS[0]} lang={lang} />
+
       <SaveDate t={t} lang={lang} target={WEDDING_DATE} />
 
-      <Timeline t={t} lang={lang} />
+      <PhotoStrip photos={PHOTO_GROUPS[1]} lang={lang} />
 
       <Venue t={t} lang={lang} />
 
+      <PhotoStrip photos={PHOTO_GROUPS[2]} lang={lang} />
+
       <MapSection t={t} lang={lang} />
 
-      <Gallery t={t} lang={lang} />
+      <PhotoStrip photos={PHOTO_GROUPS[3]} lang={lang} />
 
       <RSVPSection t={t} lang={lang} />
 
