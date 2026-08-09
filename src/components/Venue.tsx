@@ -37,7 +37,7 @@ export function Venue({ t, lang }: { t: T; lang: string }) {
                 />
               ))}
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/70 via-ink/30 to-transparent p-6 text-center">
-                <div className="font-script text-3xl text-cream">{t.venueCaption}</div>
+                <div className="font-names text-4xl text-cream">{t.venueName}</div>
                 <div className={`mt-1 text-[10px] text-cream/85 ${isAr ? "font-arabic text-sm" : "tracking-[0.4em] uppercase"}`}>
                   {t.venueTitle}
                 </div>
