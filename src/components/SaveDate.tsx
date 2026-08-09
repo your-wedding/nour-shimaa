@@ -1,6 +1,7 @@
 import type { T, Lang } from "../i18n/translations";
 import { OrnamentDivider } from "./OrnamentDivider";
 import { Countdown } from "./Countdown";
+import { PhotoStrip } from "./PhotoStrip";
 
 export function SaveDate({ t, lang, target }: { t: T; lang: Lang; target: Date }) {
   const isAr = lang === "ar";
@@ -18,6 +19,8 @@ export function SaveDate({ t, lang, target }: { t: T; lang: Lang; target: Date }
           </div>
         </div>
       </section>
+
+      <PhotoStrip photos={["/gallery/gallery-2.jpg"]} />
 
       <section className="relative px-6 py-16">
         <div className="mx-auto max-w-md text-center">
@@ -61,6 +64,8 @@ export function SaveDate({ t, lang, target }: { t: T; lang: Lang; target: Date }
           </div>
         </div>
       </section>
+
+      <PhotoStrip photos={["/gallery/gallery-3.jpg"]} />
     </>
   );
 }
