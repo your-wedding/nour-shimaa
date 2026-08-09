@@ -13,6 +13,7 @@ import { LanguageToggle } from "./components/LanguageToggle";
 import { OrnamentDivider } from "./components/OrnamentDivider";
 import { Reveal } from "./components/Reveal";
 import { FallingPetals } from "./components/FallingPetals";
+import { PhotoStrip } from "./components/PhotoStrip";
 
 const WEDDING_DATE = new Date("2026-10-09T16:00:00Z");
 
@@ -45,6 +46,8 @@ function MainContent() {
         <Hero t={t} lang={lang} visible={heroVisible} petalsVisible={petalsVisible} />
 
         <Reveal><Bismillah t={t} /></Reveal>
+
+        <Reveal><PhotoStrip photos={["/gallery/gallery-1.jpg"]} /></Reveal>
 
         <Reveal><SaveDate t={t} lang={lang} target={WEDDING_DATE} /></Reveal>
 
