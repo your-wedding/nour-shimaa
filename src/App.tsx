@@ -7,6 +7,7 @@ import { SaveDate } from "./components/SaveDate";
 import { Timeline } from "./components/Timeline";
 import { Venue } from "./components/Venue";
 import { MapSection } from "./components/MapSection";
+import { Gallery } from "./components/Gallery";
 import { RSVPSection } from "./components/RSVPSection";
 import { MusicPlayer } from "./components/MusicPlayer";
 import { LanguageToggle } from "./components/LanguageToggle";
@@ -42,6 +43,8 @@ function MainContent() {
       <Venue t={t} lang={lang} />
 
       <MapSection t={t} lang={lang} />
+
+      <Gallery t={t} lang={lang} />
 
       <RSVPSection t={t} lang={lang} />
 
