@@ -28,11 +28,11 @@ export function Hero({ t, lang, visible, petalsVisible }: { t: T; lang: string; 
           <div className={`mb-4 text-[10px] tracking-[0.5em] text-gold-deep/80 ${isAr ? "font-arabic text-sm tracking-normal" : "uppercase"}`}>
             {t.withHonor}
           </div>
-          <h1 className="font-script text-[clamp(3.5rem,14vw,7rem)] leading-[0.85] text-ink/85">
+          <h1 className="font-names text-[clamp(3.5rem,14vw,7rem)] leading-[0.85] text-ink/85">
            Nour 
           </h1>
           <div className="my-1 font-serif-elegant text-2xl italic text-gold-deep">&</div>
-          <h1 className="font-script text-[clamp(3.5rem,14vw,7rem)] leading-[0.85] text-ink/85">
+          <h1 className="font-names text-[clamp(3.5rem,14vw,7rem)] leading-[0.85] text-ink/85">
             Shimaa
           </h1>
           <OrnamentDivider className="mx-auto mt-6 h-6 w-44 text-gold-deep" />
