@@ -58,11 +58,7 @@ export function Hero({ t, lang, visible, petalsVisible }: { t: T; lang: string; 
           <div className={`mt-1 text-xs text-ink/60 fade-up ${isAr ? "font-arabic" : "italic"}`} style={{ animationDelay: "1.2s", textShadow: "0 1px 6px oklch(0.98 0.01 90/0.8)" }}>
             {t.time}
           </div>
-          <div className="mt-5 inline-block border border-gold-deep/60 bg-gold-deep/10 px-4 py-1.5 fade-up" style={{ animationDelay: "1.35s" }}>
-            <span className={`text-[10px] tracking-[0.35em] text-gold-deep ${isAr ? "font-arabic text-sm tracking-normal" : "uppercase"}`}>
-              {isAr ? "احفظ التاريخ" : "Save the Date"}
-            </span>
-          </div>
+        </div>
         </div>
       </div>
       {petalsVisible && <FallingPetals count={26} />}
